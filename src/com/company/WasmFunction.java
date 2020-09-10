@@ -24,6 +24,9 @@ public class WasmFunction {
         }
         String wattedParams = "";
         for (WasmVariable param : this.parameters) {
+            if(param instanceof WasmConst){
+                continue;
+            }
             wattedParams += param.getParam();
 //            System.out.println(wattedParams);
         }

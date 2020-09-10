@@ -4,9 +4,8 @@ public class WasmInstruction {
     public String name;
     public int opcode;
 
-    public WasmInstruction(String name, int opcode) {
+    public WasmInstruction(String name) {
         this.name = name;
-        this.opcode = opcode;
     }
 
     public String toWat() {

@@ -18,6 +18,8 @@ public class WasmFunction {
     public String toWat() {
         String wattedInstructions = "";
         for (WasmInstruction wasmInstruction : this.instructions) {
+            if(wasmInstruction == null) // Might not exist if the array is empty
+                continue;
             wattedInstructions += wasmInstruction.toWat();
         }
         String wattedParams = "";
